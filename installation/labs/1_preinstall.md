@@ -14,7 +14,7 @@
 2. Show the mount attributes of all volumes:
 
 
-	 mount -a 
+	 mount 
 	 
 	 
 	 /dev/xvde on / type ext4 (rw)
