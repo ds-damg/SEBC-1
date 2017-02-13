@@ -3,12 +3,14 @@
 
 ---
 1. Check `vm.swappiness` on all your nodes:
-    * Set the value to `1` if necessary 
-    * 
-	echo "vm.swappiness=1" >> /etc/sysctl.conf ; init 6 (or reboot)
+    
+	*cat /proc/sys/vm/swappiness
+	*echo "vm.swappiness=1" >> /etc/sysctl.conf ; init 6 (or reboot)
 ---
 
 2. Show the mount attributes of all volumes:
+
+
 	 mount -a 
 	 
 	 
@@ -29,19 +31,35 @@
 	 
 	 
      /dev/xvdf on /mnt/data1 type ext4 (rw,noatime)
+	 
+	 
      /dev/xvdg on /mnt/data2 type ext4 (rw,noatime)
+	 
+	 
      cm_processes on /var/run/cloudera-scm-agent/process type tmpfs (rw,mode=0751)
-Generating pre-built zip archives for distribution:
+	 
+	 
 
 ---
 
 3. Show the reserve space of any non-root, `ext`-based volumes:
 
+
 	 [root@sebnnr1n1 cloudera]# tune2fs -l /dev/xvde | grep Reserved
+	 
+	 
 	  Reserved block count:     327625
+	  
+	  
 	  Reserved GDT blocks:      510
+	  
+	  
 	  Reserved blocks uid:      0 (user root)
+	  
+	  
 	  Reserved blocks gid:      0 (group root)
+	  
+	  
 	  [root@sebnnr1n1 cloudera]# tune2fs -l /dev/xvdf | grep Reserved
 	  Reserved block count:     0
 	  Reserved GDT blocks:      959
