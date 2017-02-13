@@ -10,12 +10,24 @@
 
 2. Show the mount attributes of all volumes:
 	 mount -a 
+	 
+	 
 	 /dev/xvde on / type ext4 (rw)
+	 
+	 
      proc on /proc type proc (rw)
      sysfs on /sys type sysfs (rw)
+	 
+	 
      devpts on /dev/pts type devpts (rw,gid=5,mode=620)
+	 
+	 
      tmpfs on /dev/shm type tmpfs (rw)
+	 
+	 
      none on /proc/sys/fs/binfmt_misc type binfmt_misc (rw)
+	 
+	 
      /dev/xvdf on /mnt/data1 type ext4 (rw,noatime)
      /dev/xvdg on /mnt/data2 type ext4 (rw,noatime)
      cm_processes on /var/run/cloudera-scm-agent/process type tmpfs (rw,mode=0751)
