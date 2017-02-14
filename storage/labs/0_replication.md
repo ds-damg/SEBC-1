@@ -283,52 +283,55 @@ sys     0m0.698s
 - My Source
 
 ```
-[root@sebnnr1n1 zones]# hadoop fsck  /user/mglaserna/distcpfile  -files -blocks
-DEPRECATED: Use of this script to execute hdfs command is deprecated.
-Instead use the hdfs command for it.
 
-Connecting to namenode via http://sebnnr1n1.sebc.com:50070
-FSCK started by root (auth:SIMPLE) from /172.31.8.212 for path /user/mglaserna/distcpfile at Tue Feb 14 17:28:26 PHT 2017
-/user/mglaserna/distcpfile <dir>
-/user/mglaserna/distcpfile/_SUCCESS 0 bytes, 0 block(s):  OK
-
-/user/mglaserna/distcpfile/part-m-00000 145000000 bytes, 2 block(s):  OK
-0. BP-1865316537-172.31.8.212-1487005765936:blk_1073757183_16359 len=134217728 Live_repl=3
-1. BP-1865316537-172.31.8.212-1487005765936:blk_1073757189_16365 len=10782272 Live_repl=3
-
-/user/mglaserna/distcpfile/part-m-00001 145000000 bytes, 2 block(s):  OK
-0. BP-1865316537-172.31.8.212-1487005765936:blk_1073757185_16361 len=134217728 Live_repl=3
-1. BP-1865316537-172.31.8.212-1487005765936:blk_1073757187_16363 len=10782272 Live_repl=3
-
-/user/mglaserna/distcpfile/part-m-00002 145000000 bytes, 2 block(s):  OK
-0. BP-1865316537-172.31.8.212-1487005765936:blk_1073757184_16360 len=134217728 Live_repl=3
-1. BP-1865316537-172.31.8.212-1487005765936:blk_1073757188_16364 len=10782272 Live_repl=3
-
-/user/mglaserna/distcpfile/part-m-00003 145000000 bytes, 2 block(s):  OK
-0. BP-1865316537-172.31.8.212-1487005765936:blk_1073757186_16362 len=134217728 Live_repl=3
-1. BP-1865316537-172.31.8.212-1487005765936:blk_1073757190_16366 len=10782272 Live_repl=3
-
-Status: HEALTHY
-Total size:    580000000 B
-Total dirs:    1
-Total files:   5
-Total symlinks:                0
-Total blocks (validated):      8 (avg. block size 72500000 B)
-Minimally replicated blocks:   8 (100.0 %)
-Over-replicated blocks:        0 (0.0 %)
-Under-replicated blocks:       0 (0.0 %)
-Mis-replicated blocks:         0 (0.0 %)
-Default replication factor:    3
-Average block replication:     3.0
-Corrupt blocks:                0
-Missing replicas:              0 (0.0 %)
-Number of data-nodes:          4
-Number of racks:               2
 
 ```
 - My Target
 
 ```
+[root@sebnnr1n1 ~]# hadoop fsck  /user/mglaserna/sourcedistcp/screenthong/source -files -blocks
+DEPRECATED: Use of this script to execute hdfs command is deprecated.
+Instead use the hdfs command for it.
+
+Connecting to namenode via http://sebnnr1n1.sebc.com:50070
+FSCK started by root (auth:SIMPLE) from /172.31.8.212 for path /user/mglaserna/sourcedistcp/screenthong/source at Tue Feb 14 22:51:21 PHT 2017
+/user/mglaserna/sourcedistcp/screenthong/source <dir>
+/user/mglaserna/sourcedistcp/screenthong/source/_SUCCESS 0 bytes, 0 block(s):  OK
+
+/user/mglaserna/sourcedistcp/screenthong/source/part-m-00000 524280000 bytes, 4 block(s):  OK
+0. BP-1865316537-172.31.8.212-1487005765936:blk_1073757150_16326 len=134217728 Live_repl=3
+1. BP-1865316537-172.31.8.212-1487005765936:blk_1073757153_16329 len=134217728 Live_repl=3
+2. BP-1865316537-172.31.8.212-1487005765936:blk_1073757159_16335 len=134217728 Live_repl=3
+3. BP-1865316537-172.31.8.212-1487005765936:blk_1073757162_16338 len=121626816 Live_repl=3
+
+/user/mglaserna/sourcedistcp/screenthong/source/part-m-00001 524280000 bytes, 4 block(s):  OK
+0. BP-1865316537-172.31.8.212-1487005765936:blk_1073757156_16332 len=134217728 Live_repl=3
+1. BP-1865316537-172.31.8.212-1487005765936:blk_1073757158_16334 len=134217728 Live_repl=3
+2. BP-1865316537-172.31.8.212-1487005765936:blk_1073757160_16336 len=134217728 Live_repl=3
+3. BP-1865316537-172.31.8.212-1487005765936:blk_1073757164_16340 len=121626816 Live_repl=3
+
+Status: HEALTHY
+ Total size:    1048560000 B
+ Total dirs:    1
+ Total files:   3
+ Total symlinks:                0
+ Total blocks (validated):      8 (avg. block size 131070000 B)
+ Minimally replicated blocks:   8 (100.0 %)
+ Over-replicated blocks:        0 (0.0 %)
+ Under-replicated blocks:       0 (0.0 %)
+ Mis-replicated blocks:         0 (0.0 %)
+ Default replication factor:    3
+ Average block replication:     3.0
+ Corrupt blocks:                0
+ Missing replicas:              0 (0.0 %)
+ Number of data-nodes:          4
+ Number of racks:               2
+FSCK ended at Tue Feb 14 22:51:21 PHT 2017 in 2 milliseconds
+
+
+The filesystem under path '/user/mglaserna/sourcedistcp/screenthong/source' is HEALTHY
+
 ```
+
 
 ------
