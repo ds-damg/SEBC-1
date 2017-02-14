@@ -1,6 +1,7 @@
 # 0_nodeips
 # Sytems are being shutdown when not in use please advise if system will be check
-
+# Domains is : sebc.com
+# Realm @SEBC
 
 
 | Hostname           | Private Ip   | Public Ip    | Roles                                                                                                                                                                                                                                                                                         |
