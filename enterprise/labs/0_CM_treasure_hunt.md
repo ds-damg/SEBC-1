@@ -6,7 +6,8 @@ Where in CM is the Kerberos Security Realm value displayed?
 Which CDH service(s) host a property for enabling Kerberos authentication?
   - Zookeeper, HDFS, YARN
 How do you upgrade the CM agents?
-  - Via the yum command  'yum upgrade cloudera-manager-daemons cloudera-manager-agent'
+  - Via the yum command  'yum upgrade cloudera-manager-daemons cloudera-manager-agent' - manually
+  - or after upgrade of cm via wizard
 Give the tsquery statement used to chart Hue's CPU utilization?
   - select cpu_system_rate + cpu_user_rate where category=ROLE and serviceName=$SERVICENAME
 Name all the roles that make up the Hive service
