@@ -30,4 +30,9 @@ v14
   } ]
 }[
 
+curl -u mglaserna:cloudera "https://sebnnr1n1:7183/api/v14/cm/scmDbInfo" -k -GET
+{
+  "scmDbType" : "MYSQL",
+  "embeddedDbUsed" : false
+}
 ```
