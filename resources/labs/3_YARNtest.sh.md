@@ -1,5 +1,9 @@
-
-
+-------
+#Change Logs
+Eddited the time command 
+outputted the value of reducer in to file
+segrate all log into different directories
+--------
 ```
 #!/bin/sh
 # Confirm the path values given below correspond to your installation
