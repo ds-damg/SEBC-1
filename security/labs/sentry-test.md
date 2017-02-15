@@ -37,7 +37,7 @@ No rows selected (0.363 seconds)
 ```
 #Allow Super User
 -----
-
+```
 0: jdbc:hive2://sebnnr2n2.sebc.com:10000/defa>
 
 0: jdbc:hive2://sebnnr2n2.sebc.com:10000/defa> CREATE ROLE sentry_admin;
