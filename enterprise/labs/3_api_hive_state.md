@@ -1,3 +1,4 @@
+```
 [root@sebnnr1n1 ~]#  curl -X POST -H "Content-Type:application/json" -d '{ "items": [ { "command": "stop" } ] }' -u mglaserna:cloudera "https://sebnnr1n1:7183/api/v6/clusters/mglaserna/services/hive/commands/stop" -k
 {
   "id" : 1994,
@@ -48,7 +49,7 @@
     "clusterName" : "cluster",
     "serviceName" : "hive"
   }
-```
+ 
   [root@sebnnr1n1 ~]#curl -u mglaserna:cloudera "https://sebnnr1n1:7183/api/v12/clusters/mglaserna/services/hive/" -k                                                    {
   "name" : "hive",
   "type" : "HIVE",
