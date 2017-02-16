@@ -287,7 +287,47 @@ sys     0m0.698s
 
 ```
 - My Target
+[hdfs@ip-172-31-8-59 ~]$ hadoop fsck /tmp/screenthong/source -files -blocks
+DEPRECATED: Use of this script to execute hdfs command is deprecated.
+Instead use the hdfs command for it.
 
+Connecting to namenode via http://ip-172-31-8-59.ap-southeast-1.compute.internal:50070
+FSCK started by hdfs (auth:SIMPLE) from /172.31.8.59 for path /tmp/screenthong/source at Tue Feb 14 21:23:43 EST 2017
+/tmp/screenthong/source <dir>
+/tmp/screenthong/source/_SUCCESS 0 bytes, 0 block(s):  OK
+
+/tmp/screenthong/source/part-m-00000 524280000 bytes, 4 block(s):  OK
+0. BP-106581566-172.31.8.59-1487053970381:blk_1073742716_1892 len=134217728 Live_repl=3
+1. BP-106581566-172.31.8.59-1487053970381:blk_1073742718_1894 len=134217728 Live_repl=3
+2. BP-106581566-172.31.8.59-1487053970381:blk_1073742720_1896 len=134217728 Live_repl=3
+3. BP-106581566-172.31.8.59-1487053970381:blk_1073742722_1898 len=121626816 Live_repl=3
+
+/tmp/screenthong/source/part-m-00001 524280000 bytes, 4 block(s):  OK
+0. BP-106581566-172.31.8.59-1487053970381:blk_1073742717_1893 len=134217728 Live_repl=3
+1. BP-106581566-172.31.8.59-1487053970381:blk_1073742719_1895 len=134217728 Live_repl=3
+2. BP-106581566-172.31.8.59-1487053970381:blk_1073742721_1897 len=134217728 Live_repl=3
+3. BP-106581566-172.31.8.59-1487053970381:blk_1073742723_1899 len=121626816 Live_repl=3
+
+Status: HEALTHY
+Total size:    1048560000 B
+Total dirs:    1
+Total files:   3
+Total symlinks:                0
+Total blocks (validated):      8 (avg. block size 131070000 B)
+Minimally replicated blocks:   8 (100.0 %)
+Over-replicated blocks:        0 (0.0 %)
+Under-replicated blocks:       0 (0.0 %)
+Mis-replicated blocks:         0 (0.0 %)
+Default replication factor:    3
+Average block replication:     3.0
+Corrupt blocks:                0
+Missing replicas:              0 (0.0 %)
+Number of data-nodes:          4
+Number of racks:               1
+FSCK ended at Tue Feb 14 21:23:43 EST 2017 in 4 milliseconds
+
+
+The filesystem under path '/tmp/screenthong/source' is HEALTHY
 ```
 [root@sebnnr1n1 ~]# hadoop fsck  /user/mglaserna/sourcedistcp/screenthong/source -files -blocks
 DEPRECATED: Use of this script to execute hdfs command is deprecated.
