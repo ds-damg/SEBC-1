@@ -68,7 +68,42 @@ Valid starting     Expires            Service principal
         renew until 02/24/17 07:17:00
 [fullerton@chalnnr1n1 ~]$
 
+###############################additional ############
+
+No rows affected (0.107 seconds)
+0: jdbc:hive2://chalnnr2n2.sebc.com:10000/def> show grant role hospitality;
+INFO  : Compiling command(queryId=hive_20170217075252_ba4356b2-f26f-4150-880d-a7439ceb0744): show grant role hospitality
+INFO  : Semantic Analysis Completed
+INFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:database, type:string, comment:from deserializer), FieldSchema(name:table, type:string, comment:from deserializer), FieldSchema(name:partition, type:string, comment:from deserializer), FieldSchema(name:column, type:string, comment:from deserializer), FieldSchema(name:principal_name, type:string, comment:from deserializer), FieldSchema(name:principal_type, type:string, comment:from deserializer), FieldSchema(name:privilege, type:string, comment:from deserializer), FieldSchema(name:grant_option, type:boolean, comment:from deserializer), FieldSchema(name:grant_time, type:bigint, comment:from deserializer), FieldSchema(name:grantor, type:string, comment:from deserializer)], properties:null)
+INFO  : Completed compiling command(queryId=hive_20170217075252_ba4356b2-f26f-4150-880d-a7439ceb0744); Time taken: 0.051 seconds
+INFO  : Executing command(queryId=hive_20170217075252_ba4356b2-f26f-4150-880d-a7439ceb0744): show grant role hospitality
+INFO  : Starting task [Stage-0:DDL] in serial mode
+INFO  : Completed executing command(queryId=hive_20170217075252_ba4356b2-f26f-4150-880d-a7439ceb0744); Time taken: 0.022 seconds
+INFO  : OK
++-----------+--------+------------+---------+-----------------+-----------------+------------+---------------+-------------------+----------+--+
+| database  | table  | partition  | column  | principal_name  | principal_type  | privilege  | grant_option  |    grant_time     | grantor  |
++-----------+--------+------------+---------+-----------------+-----------------+------------+---------------+-------------------+----------+--+
+| default   |        |            |         | hospitality     | ROLE            | select     | false         | 1487317155538000  | --       |
++-----------+--------+------------+---------+-----------------+-----------------+------------+---------------+-------------------+----------+--+
+1 row selected (0.161 seconds)
+0: jdbc:hive2://chalnnr2n2.sebc.com:10000/def> show grant role retail;
+INFO  : Compiling command(queryId=hive_20170217075353_dbd05885-4a3a-4b07-9ed9-75c31722d971): show grant role retail
+INFO  : Semantic Analysis Completed
+INFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:database, type:string, comment:from deserializer), FieldSchema(name:table, type:string, comment:from deserializer), FieldSchema(name:partition, type:string, comment:from deserializer), FieldSchema(name:column, type:string, comment:from deserializer), FieldSchema(name:principal_name, type:string, comment:from deserializer), FieldSchema(name:principal_type, type:string, comment:from deserializer), FieldSchema(name:privilege, type:string, comment:from deserializer), FieldSchema(name:grant_option, type:boolean, comment:from deserializer), FieldSchema(name:grant_time, type:bigint, comment:from deserializer), FieldSchema(name:grantor, type:string, comment:from deserializer)], properties:null)
+INFO  : Completed compiling command(queryId=hive_20170217075353_dbd05885-4a3a-4b07-9ed9-75c31722d971); Time taken: 0.051 seconds
+INFO  : Executing command(queryId=hive_20170217075353_dbd05885-4a3a-4b07-9ed9-75c31722d971): show grant role retail
+INFO  : Starting task [Stage-0:DDL] in serial mode
+INFO  : Completed executing command(queryId=hive_20170217075353_dbd05885-4a3a-4b07-9ed9-75c31722d971); Time taken: 0.028 seconds
+INFO  : OK
++-----------+--------+------------+---------+-----------------+-----------------+------------+---------------+-------------------+----------+--+
+| database  | table  | partition  | column  | principal_name  | principal_type  | privilege  | grant_option  |    grant_time     | grantor  |
++-----------+--------+------------+---------+-----------------+-----------------+------------+---------------+-------------------+----------+--+
+| *         |        |            |         | retail          | ROLE            | *          | false         | 1487316444610000  | --       |
++-----------+--------+------------+---------+-----------------+-----------------+------------+---------------+-------------------+----------+--+
+1 row selected (0.098 seconds)
 
 
+
+```
 
 
