@@ -31,8 +31,8 @@ Whatever platform you choose for class, the following conditions must hold:
 * The service provides OS platforms that are required by Cloudera
 
 For training demonstrations, I will use RHEL/Centos 6.5 or later.
-Please avoid using any Linux version you don't know the platform well. There
 are substantive changes in RHEL/CentOS 7.x that are not yet accounted
+Please avoid using any Linux version you don't know the platform well. There
 for in this training, for example, and are not completely covered in
 Cloudera's documentation.
 
